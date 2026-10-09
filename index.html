@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="CSS/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Futbolista</title>
+</head>
+<body>
+<div class="ficha">
+    <form action="" method="POST">
+        
+        <fieldset class="datos">
+            <legend>Datos</legend>
+            
+            <div class="nombre">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre del jugador" required>
+            </div><hr>
+            
+            <div class="seleccion">
+                <label for="seleccion">Selección:</label>
+                <select name="seleccion" id="seleccion">
+                    <option value="España">España</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Francia">Francia</option>
+                    <option value="Inglaterra">Inglaterra</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Marruecos">Marruecos</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Bélgica">Bélgica</option>
+                    <option value="Países Bajos">Países Bajos</option>
+                    <option value="México">México</option>
+                </select>
+            </div><hr>
+
+            <div class="fecha">
+                <label for="fecha">Fecha de nacimiento:</label>
+                <input type="date" id="fecha" name="fecha">
+            </div><hr>
+
+            <div class="dorsal">
+                <label for="dorsal">Dorsal</label>
+                <input type="number" id="dorsal" name="dorsal" min="1" max="99" placeholder="Elija su dorsal" required>
+            </div><hr>
+
+            <div class="color">
+                <label for="color">Color de la camiseta:</label>
+                <input type="color" id="color" name="color">
+            </div><hr>
+        </fieldset>
+
+        <fieldset>
+            <legend>Características</legend>
+            
+            <div class="posicion">
+                <label>Posición:</label>
+                <input type="radio" id="arq" name="posicion" value="Arquero"><label for="arq">Arquero</label>
+                <input type="radio" id="def" name="posicion" value="Defensor"><label for="def">Defensor</label>
+                <input type="radio" id="med" name="posicion" value="Mediocampista"><label for="med">Mediocampista</label>
+                <input type="radio" id="del" name="posicion" value="Delantero"><label for="del">Delantero</label>
+            </div><hr>
+
+            <div class="fortalezas">
+                <label>Fortalezas:</label>
+                <input type="checkbox" id="def-f" name="fortalezas" value="Definicion"><label for="def-f">Definición</label>
+                <input type="checkbox" id="vel-f" name="fortalezas" value="Velocidad"><label for="vel-f">Velocidad</label>
+                <input type="checkbox" id="pas-f" name="fortalezas" value="Pase"><label for="pas-f">Pase</label>
+                <input type="checkbox" id="gam-f" name="fortalezas" value="Gambeta"><label for="gam-f">Gambeta</label>
+                <input type="checkbox" id="cab-f" name="fortalezas" value="Cabezazo"><label for="cab-f">Cabezazo</label>
+                <input type="checkbox" id="mar-f" name="fortalezas" value="Marca"><label for="mar-f">Marca</label>
+            </div><hr>
+
+            <div class="atributo">
+                <label for="def-r">Definición:</label>
+                <input type="range" id="def-r" name="definicion" min="1" max="99"><br>
+
+                <label for="vel-r">Velocidad:</label>
+                <input type="range" id="vel-r" name="velocidad" min="1" max="99"><br>
+
+                <label for="pas-r">Pase:</label>
+                <input type="range" id="pas-r" name="pase" min="1" max="99"><br>
+
+                <label for="gam-r">Gambeta:</label>
+                <input type="range" id="gam-r" name="gambeta" min="1" max="99"><br>
+
+                <label for="cab-r">Cabezazo:</label>
+                <input type="range" id="cab-r" name="cabezazo" min="1" max="99"><br>
+
+                <label for="mar-r">Marca:</label>
+                <input type="range" id="mar-r" name="marca" min="1" max="99">
+            </div><hr>
+        </fieldset>
+
+        <div class="reseña">
+            <label for="reseña">Reseña:</label><br>
+            <textarea id="reseña" name="reseña" rows="10" cols="80"></textarea>
+        </div><hr>
+
+        <div>
+            <input type="submit" value="Crear ficha">
+        </div>
+    </form>
+    <div id="plantel"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
